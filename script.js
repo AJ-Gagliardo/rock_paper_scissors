@@ -1,5 +1,5 @@
 
-function computerChoice(){
+function getComputerChoice(){
     n = Math.floor(Math.random()*2);
     let AIChoice;
 
@@ -28,3 +28,28 @@ if correct, keep, if not, repeat.
 // function playerSelection((prompt("write rock, paper or scissors").toLowerCase)){
 //     return playerSelection;
 // }
+
+
+//let playerChoice = prompt("write rock, paper or scissors").toLowerCase;
+//return playerChoice;
+
+
+
+// function playerSelection(){
+//     let playerChoice = prompt("write rock, paper or scissors").toLowerCase;
+//     return playerChoice;
+// }
+
+
+function playRound(playerSelection = 'rock', computerSelection= 'scissors'){
+winMessage = `You win ${playerSelection} beats ${computerSelection}`;
+    if ((playerSelection == 'rock') && (computerSelection == 'scissors')){
+        return winMessage;
+    }
+
+}
+
+const playerSelection = 'rock';
+const computerSelection = 'scissors'
+// const computerSelection = getComputerChoice();
+// console.log(PlayRound(playerSelection,computerSelection));
