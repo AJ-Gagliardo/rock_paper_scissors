@@ -40,14 +40,30 @@ if correct, keep, if not, repeat.
 //     return playerChoice;
 // }
 
-
+/*
+// this is wokring but im trying stuff with it
 function playRound(playerSelection = 'rock', computerSelection= 'scissors'){
 winMessage = `You win ${playerSelection} beats ${computerSelection}`;
     if ((playerSelection == 'rock') && (computerSelection == 'scissors')){
         return winMessage;
     }
 
-}
+} */
+
+
+// trying in another format
+function playRound(playerSelection = 'rock', computerSelection= 'scissors'){
+    winMessage = `You win ${playerSelection} beats ${computerSelection}`;
+    loseMessage = `You lose ${computerSelection} beats ${playerSelection}`
+    tieMessage = `Tie, you both chose ${playerSelection}`
+        if ((playerSelection == 'rock') && (computerSelection == 'scissors')){
+            return winMessage;
+
+    }
+
+
+
+
 
 const playerSelection = 'rock';
 const computerSelection = 'scissors'
