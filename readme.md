@@ -1,1 +1,1 @@
-This is a project I am trying to make to become better at javascript, rock papers and scissor.
+This is a project I am trying to make to become better at javascript, rock papers and scissor.  
