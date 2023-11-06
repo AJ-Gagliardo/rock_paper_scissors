@@ -12,10 +12,6 @@ function getComputerChoice(){
 }
 
 
-// computerChoice();
-
-
-
 
 
 
@@ -26,15 +22,7 @@ function playerChoice(){
     
 }
 
-/*
-// this is wokring but im trying stuff with it
-function playRound(playerSelection = 'rock', computerSelection= 'scissors'){
-winMessage = `You win ${playerSelection} beats ${computerSelection}`;
-    if ((playerSelection == 'rock') && (computerSelection == 'scissors')){
-        return winMessage;
-    }
 
-} */
 
 
 // trying in another format
@@ -63,10 +51,34 @@ function playRound(playerSelection, computerSelection){
 
 
 
+function game(){
+    let playerScore = 0;
+    let computerScore = 0;
+    let scoreboard = `Player Score: ${playerScore}  Computer Score: ${computerScore}`;
 
-// const playerSelection = 'rock';
-// const computerSelection = 'scissors'
+    for(let i=0; i<5; i++){
+        let result = playRound();
+        if (result == winMessage) {
+            console.log(winMessage);
+            playerScore +=1;
+            scoreboard = `Player Score: ${playerScore}  Computer Score: ${computerScore}`;
+            console.log(scoreboard);
+        }
+        else if (result == loseMessage){
+            console.log(loseMessage) ;
+            computerScore +=1;
+            scoreboard = `Player Score: ${playerScore}  Computer Score: ${computerScore}`;
+            console.log(scoreboard);
+        }
+        else{
+            console.log(tieMessage) ;
+            console.log(scoreboard);
+        }
+    }
+   
+}
 
-
-// const computerSelection = getComputerChoice();
-// console.log(PlayRound(playerSelection,computerSelection));
+function printing(){for (let i=0;i<5;i++){
+    console.log(i)
+}
+}
