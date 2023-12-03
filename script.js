@@ -11,6 +11,13 @@ function getComputerChoice(){
     return AIChoice;
 }
 
+const results = document.querySelector('.results');
+// results.textContent = 'asd2'
+console.log(results);
+const image = document.querySelector('.image');
+console.log(image)
+
+
 
 
 function playRound(playerSelection, computerSelection){
@@ -22,14 +29,22 @@ function playRound(playerSelection, computerSelection){
     if (((playerSelection == 'rock') && (computerSelection == 'scissors')) || 
     (playerSelection == 'paper') && (computerSelection == 'rock')||
     (playerSelection == 'scissors')&&(computerSelection == 'paper')){
+        results.textContent= winMessage;
+        image.src="img/win.jpg";
         return winMessage;
+        
     }
     else if (((playerSelection == 'rock') && (computerSelection == 'paper')) || 
     (playerSelection == 'paper') && (computerSelection == 'scissors') ||
     (playerSelection == 'scissors')&& (computerSelection == 'rock')){
+        results.textContent= loseMessage;
+        image.src="img/lose.jpg";
         return loseMessage;
+
     }
     else if ((playerSelection == computerSelection)){
+        results.textContent= tieMessage;
+        image.src="img/tie.jpg";
         return tieMessage;
     }
     else { return naMessage};
@@ -58,6 +73,7 @@ scissors.addEventListener("click", function(){
     console.log(result);
 
 })
+
 
 
 // trying in another format
