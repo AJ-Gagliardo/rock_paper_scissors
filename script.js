@@ -13,6 +13,56 @@ function getComputerChoice(){
 
 
 
+function playRound(playerSelection, computerSelection){
+    computerSelection = getComputerChoice();
+    winMessage = `You win, you chose ${playerSelection} which beats AI's ${computerSelection}`;
+    loseMessage = `You lose, AI chose ${computerSelection} which beats your ${playerSelection}`;
+    tieMessage = `Tie, you both chose ${playerSelection}`;
+    naMessage = `${playerSelection} is not a valid option, please try again`;
+    if (((playerSelection == 'rock') && (computerSelection == 'scissors')) || 
+    (playerSelection == 'paper') && (computerSelection == 'rock')||
+    (playerSelection == 'scissors')&&(computerSelection == 'paper')){
+        return winMessage;
+    }
+    else if (((playerSelection == 'rock') && (computerSelection == 'paper')) || 
+    (playerSelection == 'paper') && (computerSelection == 'scissors') ||
+    (playerSelection == 'scissors')&& (computerSelection == 'rock')){
+        return loseMessage;
+    }
+    else if ((playerSelection == computerSelection)){
+        return tieMessage;
+    }
+    else { return naMessage};
+}
+
+
+
+// playerChoice();
+
+const rock = document.querySelector('.rock-btn');
+rock.addEventListener("click", function(){
+    const result = playRound('rock', getComputerChoice());
+    console.log(result);
+});
+
+
+const paper = document.querySelector('.paper-btn');
+paper.addEventListener("click",function(){
+    const result = playRound('paper', getComputerChoice());
+    console.log(result);
+})
+
+const scissors = document.querySelector('.scissors-btn');
+scissors.addEventListener("click", function(){
+    const result = playRound('scissors', getComputerChoice());
+    console.log(result);
+
+})
+
+
+// trying in another format
+
+/* // Old function
 
 
 function playerChoice(){
@@ -22,10 +72,6 @@ function playerChoice(){
     
 }
 
-
-
-
-// trying in another format
 function playRound(playerSelection, computerSelection){
     playerSelection = playerChoice();
     computerSelection = getComputerChoice();
@@ -33,21 +79,24 @@ function playRound(playerSelection, computerSelection){
     loseMessage = `You lose, AI chose ${computerSelection} which beats your ${playerSelection}`;
     tieMessage = `Tie, you both chose ${playerSelection}`;
     naMessage = `${playerSelection} is not a valid option, please try again`;
-        if (((playerSelection == 'rock') && (computerSelection == 'scissors')) || 
-        (playerSelection == 'paper') && (computerSelection == 'rock')||
-        (playerSelection == 'scissors')&&(computerSelection == 'paper')){
-            return winMessage;
+    if (((playerSelection == 'rock') && (computerSelection == 'scissors')) || 
+    (playerSelection == 'paper') && (computerSelection == 'rock')||
+    (playerSelection == 'scissors')&&(computerSelection == 'paper')){
+        return winMessage;
     }
-        else if (((playerSelection == 'rock') && (computerSelection == 'paper')) || 
-        (playerSelection == 'paper') && (computerSelection == 'scissors') ||
-        (playerSelection == 'scissors')&& (computerSelection == 'rock')){
-            return loseMessage;
-        }
-        else if ((playerSelection == computerSelection)){
-            return tieMessage;
-        }
-        else { return naMessage};
+    else if (((playerSelection == 'rock') && (computerSelection == 'paper')) || 
+    (playerSelection == 'paper') && (computerSelection == 'scissors') ||
+    (playerSelection == 'scissors')&& (computerSelection == 'rock')){
+        return loseMessage;
     }
+    else if ((playerSelection == computerSelection)){
+        return tieMessage;
+    }
+    else { return naMessage};
+}
+
+*/
+
 
 
 

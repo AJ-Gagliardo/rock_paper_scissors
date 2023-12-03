@@ -18,3 +18,37 @@ justify-content: center;
 
 }
 
+.score-title{
+    /* display:inline-block; */
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    margin-left:50%
+    margin-right:auto;
+}
+.scores-container{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    background-color:antiquewhite;
+    padding-bottom: 5rem;
+
+}
+
+.scores{
+    display: flex;
+    flex-direction:column;
+justify-content: space-between;
+align-content: space-between;
+align-items:center;
+margin: 1rem;
+;
+}
+
+.player-score-div, .ai-score-div{
+  margin-top:1rem;
+   
+
+}
