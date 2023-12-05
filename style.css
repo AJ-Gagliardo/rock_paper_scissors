@@ -1,4 +1,7 @@
-
+html{
+    background-color: #222831;
+    color: #f2f2f2;
+}
 .btn{
     padding:2rem;
     font-size:1.5rem;
@@ -33,7 +36,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-    background-color:antiquewhite;
+    background-color:#393e46;
     padding-bottom: 5rem;
 
 }
@@ -63,5 +66,21 @@ margin: 1rem;
 
 .results{
     line-height:2rem;
-    color:red;
+    color:#f96d00;
+}
+
+@font-face {
+    font-family: 'Arcade';
+    src: url('font/8-bit Arcade In.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.title{
+    color: #f96d00;
+text-align:center;
+font-weight: 700;
+font-size:4rem;
+font-family: 'Arcade', sans-serif;
 }
